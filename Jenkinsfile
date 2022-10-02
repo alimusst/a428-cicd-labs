@@ -19,6 +19,8 @@ pipeline {
     stage('deploy') {
       steps {
         sh './jenkins/scripts/deliver.sh'
+        sh 'npm install -g heroku'
+        sh 'heroku login'
       }
     }
   }
