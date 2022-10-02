@@ -19,7 +19,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh "./jenkins/scripts/deliver.sh"
-        sh "npm install -g heroku"
+        sh "curl https://cli-assets.heroku.com/install-ubuntu.sh | sh"
       }
     }
   }
